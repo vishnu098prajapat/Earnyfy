@@ -1,0 +1,87 @@
+.shopContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.productCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.productInfo {
+  padding: 1rem;
+}
+
+.productName {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.priceInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+
+.redeemButton,
+.buyButton {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.redeemButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.redeemButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.buyButton {
+  background-color: #2196F3;
+  color: white;
+}
+
+.buyButton:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+  .shopContainer {
+    padding: 1rem;
+  }
+  
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}
